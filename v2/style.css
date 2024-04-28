@@ -1,0 +1,51 @@
+body {
+  width: 80%;
+  height: auto;
+  display: flex;
+}
+body #board {
+  position: relative;
+  border: 1px solid black;
+  float: left;
+  height: 500px;
+  width: 70%;
+  max-width: 500px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Jeu-de-Dames_02.svg");
+}
+body #direction {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+body #direction input {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: relative;
+  background-color: #ccc;
+}
+body #direction input#moveUp {
+  top: 0;
+  left: 75px;
+}
+body #direction input#moveDown {
+  bottom: 0;
+  left: 75px;
+}
+body #direction input#moveLeft {
+  top: 0;
+  left: 50px;
+}
+body #direction input#moveRight {
+  top: 0;
+  right: -50px;
+}
+body img {
+  width: 100px;
+  position: absolute;
+}
+body img[active] {
+  box-sizing: border-box;
+  border: 2px solid red;
+}/*# sourceMappingURL=style.css.map */
