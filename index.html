@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chats</title>
-    <script src="data.json"></script>
+    <script src="monJson.js"></script>
+    <script src="data.js"></script>
     <script src="chats.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="formulaire"> 
-        <form action="" method="post">
-                    <input type="radio" name="" id="">Chat à lunette</input>
-                    <input type="radio" name="" id="">Chat mignon</input>
-                    <input type="radio" name="" id="">Chat à moustaches</input>
+        <form action="" method="post" id="form">
+            <input type="radio" name="Form" value="ChatL" id="ChatL" checked>
+            <label for="ChatL">Chat à lunette</label>
+            <input type="radio" name="Form" value="ChatMi" id="ChatMi">
+            <label for="ChatMi">Chat mignon</label>
+            <input type="radio" name="Form" value="ChatMo" id="ChatMo">
+            <label for="ChatMo">Chat à moustaches</label>
         </form>
         <div>
             <input  type="button" value="Haut"><br>
-            <input  type="button"  value="Gauche">
-            <input  type="button"  value="Droite"><br>
+            <input  type="button" value="Gauche">
+            <input  type="button" value="Droite"><br>
             <input  type="button" value="Bas">
         </div>
     </section>

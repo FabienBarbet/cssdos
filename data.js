@@ -1,16 +1,16 @@
 var chats = [
     {
-        "name": "chat-lunette",
+        "nom": "chat-lunette",
         "x": 50,
         "y": 50
     },    
     {
-        "name": "chat-mignon",
+        "nom": "chat-mignon",
         "x": 100,
         "y": 100
     },    
     {
-        "name": "chat-moustache",
+        "nom": "chat-moustache",
         "x": 150,
         "y": 150
     }
