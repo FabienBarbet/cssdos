@@ -30,5 +30,5 @@ window.onload = function () {
     selected.moveRight();
   });
 
-  catArray[0].select();
+  selected = catArray[0].select();
 };
