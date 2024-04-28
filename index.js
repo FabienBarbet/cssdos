@@ -9,6 +9,7 @@ window.onload = function () {
     this.positionX = positionX;
     this.positionY = positionY;
   }
+
   // tableau predefinie de chats
   var cats = [
     new Cat("chat-lunette.png", 0, 0),
@@ -24,14 +25,14 @@ window.onload = function () {
   var selected = null;
 
   // fonction qui gere la selection courrante
-  function selectCat(cat) {
+  function selectCat(element) {
     // d'abord on reinitialize en retirant l'attribut precédant
     if (selected) {
       selected.removeAttribute("active");
     }
     // puis on l'assigne sur le nouvel element selectionné
-    cat.setAttribute("active", "");
-    selected = cat;
+    element.setAttribute("active", "");
+    selected = element;
     // Réinitialiser les bouttons si `disabled`
     updateButtonStatus();
   }
@@ -47,16 +48,16 @@ window.onload = function () {
   // on ajoute chaque chats sur le plateau
   cats.forEach(function (cat) {
     // Creation de l'element <img>
-    var image = document.createElement("img"); // <img></img>
-    image.src = "../images/" + cat.filename; // src="./images/nomdufichier.png"
-    image.style.left = cat.positionX + "px"; // left="XXpx"
-    image.style.top = cat.positionY + "px"; // top="XXpx"
-    image.classList.add("cat"); // class="chat"
+    var element = document.createElement("img"); // <img></img>
+    element.src = "./images/" + cat.filename; // src="./images/nomdufichier.png"
+    element.style.left = cat.positionX + "px"; // left="XXpx"
+    element.style.top = cat.positionY + "px"; // top="XXpx"
+    element.classList.add("cat"); // class="chat"
     // Ajout de l'élement dans le plateau
-    board.appendChild(image);
+    board.appendChild(element);
     // Ajout de l'attribut `active` sur l'évement `click`
-    image.addEventListener("click", function () {
-      selectCat(image); // si clické: <img active></img>
+    element.addEventListener("click", function () {
+      selectCat(element); // si clické: <img active></img>
     });
   });
 

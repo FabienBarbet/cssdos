@@ -10,20 +10,10 @@ body #formulaire {
 body #formulaire form {
   height: 50%;
 }
-body #board {
-  position: relative;
+body #echiquier {
   border: 1px solid black;
   float: left;
   height: 500px;
   width: 70%;
-  max-width: 500px;
   background: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Jeu-de-Dames_02.svg");
-}
-body #board img {
-  width: 100px;
-  position: absolute;
-}
-body #board img[active] {
-  box-sizing: border-box;
-  border: 2px solid red;
 }/*# sourceMappingURL=style.css.map */

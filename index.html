@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chats</title>
-    <script src="monJson.js"></script>
-    <script src="data.js"></script>
-    <script src="chats.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-    <section id="formulaire"> 
-        <form action="" method="post" id="form">
-            <input type="radio" name="Form" value="ChatL" id="ChatL" checked>
-            <label for="ChatL">Chat à lunette</label>
-            <input type="radio" name="Form" value="ChatMi" id="ChatMi">
-            <label for="ChatMi">Chat mignon</label>
-            <input type="radio" name="Form" value="ChatMo" id="ChatMo">
-            <label for="ChatMo">Chat à moustaches</label>
-        </form>
-        <div>
-            <input  type="button" value="Haut"><br>
-            <input  type="button" value="Gauche">
-            <input  type="button" value="Droite"><br>
-            <input  type="button" value="Bas">
+    <section>
+        <div id="direction">
+            <input id="moveUp" type="button" value="haut"><br>
+            <input id="moveLeft" type="button" value="gauche">
+            <input id="moveRight" type="button" value="droite"><br>
+            <input id="moveDown" type="button" value="bas">
         </div>
     </section>
-    <section id="echiquier">
+    <section id="board">
     </section>
 </body>
+
 </html>
