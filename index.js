@@ -1,8 +1,10 @@
 var catArray = [
-  Object.create(cat).create("chat-lunette.png", 0, 0),
+  /*Object.create(cat).create("chat-lunette.png", 0, 0),
   Object.create(cat).create("chat-mignon.png", 100, 0),
-  Object.create(cat).create("chat-moustaches.png", 200, 0),
+  Object.create(cat).create("chat-moustaches.png", 200, 0),*/
 ];
+
+var newCats = [];
 
 var selected = null;
 
@@ -31,4 +33,20 @@ window.onload = function () {
   });
 
   selected = catArray[0].select();
+
+  var formulaire = document.getElementById("formulaire");
+  formulaire.addEventListener("click", function (event) {
+    event.preventDefault();
+    var selected = document.getElementById("chat").value;
+    cat.create(selected);
+    // switch (selected) {
+    //   case "chat-lunette":
+    //     cat.create(selected, 0, 0);
+    //     break;
+
+    //   default:
+    //     break;
+    // }
+  });
 };
+function cat() {}
