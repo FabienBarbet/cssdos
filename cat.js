@@ -1,4 +1,20 @@
-var cats = [];
+var cats = {
+  lunette: {
+    ficher: "chat-lunette.png",
+    positionX: 0,
+    positionY: 0,
+  },
+  mignon: {
+    ficher: "chat-mignon.png",
+    positionX: 0,
+    positionY: 0,
+  },
+  moustache: {
+    ficher: "chat-moustache.png",
+    positionX: 0,
+    positionY: 0,
+  },
+};
 var step = 100;
 
 var cat = {
@@ -6,15 +22,23 @@ var cat = {
   positionX: 0,
   positionY: 0,
 
-  create(filename, positionX, positionY) {
-    this.filename = filename;
-    this.positionX = positionX;
-    this.positionY = positionY;
-    cats.push(this);
+  create(name) {
+    // this.filename = filename;
+    // this.positionX = positionX;
+    // this.positionY = positionY;
+    // // cats.push(this);
+    switch (name) {
+      case "chat-lunette":
+        cat.render(cats.lunette);
+        break;
+
+      default:
+        break;
+    }
     return this;
   },
 
-  render() {
+  render(cat) {
     var element = document.createElement("img");
     element.src = "./images/" + this.filename;
     element.style.left = this.positionX + "px";
