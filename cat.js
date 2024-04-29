@@ -2,10 +2,18 @@ var cats = [];
 var step = 100;
 
 var cat = {
+  /**
+   * Propriété
+   * ----------------------------------------------
+   */
   filename: "",
   positionX: 0,
   positionY: 0,
 
+  /**
+   * Création du chat
+   * ----------------------------------------------
+   */
   create(filename, positionX, positionY) {
     this.filename = filename;
     this.positionX = positionX;
@@ -24,6 +32,11 @@ var cat = {
     return element;
   },
 
+  /**
+   * Selection du chat
+   * ----------------------------------------------
+   */
+
   select() {
     cats.forEach(function (otherCat) {
       if (otherCat !== this) {
@@ -38,6 +51,10 @@ var cat = {
     return this;
   },
 
+  /**
+   * Déplacement du chat dans chaque direction
+   * ----------------------------------------------
+   */
   moveUp() {
     var newY = this.positionY - step;
     if (newY >= 0 && canMove(this.positionX, newY)) {
@@ -82,6 +99,13 @@ var cat = {
     }
   },
 };
+
+/**
+ * Fonction qui determine si on peut encore déplacer le chat:
+ * 1. si il dépasse pas le damier
+ * 2. si la place n'est pas occupé par un autre chat
+ * ----------------------------------------------
+ */
 function canMove(x, y) {
   for (var i = 0; i < cats.length; i++) {
     if (cats[i].positionX === x && cats[i].positionY === y) {

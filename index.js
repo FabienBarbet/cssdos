@@ -1,4 +1,9 @@
-//création des chats et placement directement sur le damier à des emplacement différents
+//
+/**
+ * création des chats et placement directement sur le damier à des emplacement différents
+ * ----------------------------------------------
+ */
+
 var catArray = [
   Object.create(cat).create("chat-lunette.png", 0, 0),
   Object.create(cat).create("chat-mignon.png", 100, 0),
@@ -9,7 +14,7 @@ var selected = null;
 
 window.onload = function () {
   /**
-   * Selection des chat sur le damier
+   * Selection des chats sur le damier
    * ----------------------------------------------
    */
   var board = document.getElementById("board");
@@ -42,7 +47,7 @@ window.onload = function () {
   selected = catArray[0].select();
 
   /**
-   * Fonction permettent le déplacement via flèches clavier
+   * Fonction permettant le déplacement via flèches clavier
    * ----------------------------------------------
    */
 
@@ -52,17 +57,17 @@ window.onload = function () {
     e = e || window.event;
 
     if (e.keyCode == "38") {
+      // flèche haut
       selected.moveUp();
-      // up arrow
     } else if (e.keyCode == "40") {
+      // flèche bas
       selected.moveDown();
-      // down arrow
     } else if (e.keyCode == "37") {
+      // flèche gauche
       selected.moveLeft();
-      // left arrow
     } else if (e.keyCode == "39") {
+      // flèche droite
       selected.moveRight();
-      // right arrow
     }
   }
 };
